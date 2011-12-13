@@ -31,8 +31,9 @@ class openldap::params {
 		default => 0644,
 	}
 
-	$slapd_config = $operatingsystem ? {
-		default => '/etc/ldap/slapd.conf',
+	$configfile = $openldap_configfile ? {
+		''	=> '/etc/ldap/slapd.conf',
+		default => $openldap_configfile,
 	}
 
 	$slapd_user = $operatingsystem ? {

@@ -1,0 +1,3 @@
+name 'kickstand-asterisk'
+version '0.0.1'
+description "This module will install Asterisk using our own PPA and setup the initial configuration."
